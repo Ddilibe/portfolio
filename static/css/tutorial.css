@@ -1,0 +1,180 @@
+.Carousel {
+	width: 100%;
+	display: flex;
+	/* margin: 0px auto; */
+	height: 70vh;
+}
+
+.carousel__left, .carousel__right {
+	position: absolute;
+	width: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	font-weight: 900;
+	font-family: 'Kanit-Black';
+	color: black;
+	cursor: pointer;
+	background-color: white;
+	border-radius: 70px;
+	top: 45%;
+}
+
+.carousel__right {
+	right: 4%;
+}
+
+.carousel__left {
+	left: 4%;
+}
+
+.carousel__details {
+	width: 100%;
+	height: 100%;
+}
+
+.Carousel__B, .Carousel__C {
+	display: none;
+}
+
+.Carousel__B, .Carousel__C, .Carousel__A {
+	width: 100%;
+	height: 100%;
+}
+
+.Carousel__image{
+	width: 100%;
+	height: 100%;
+}
+
+.carousel__title {
+	display: block;
+	position: relative;
+	color: white;
+	font-size: 60px;
+	font-family: Acme;
+	top: -30vh;
+	margin: 4%;
+}
+
+.information {
+	display: flex;
+	width: 90%;
+	margin: 5% auto;
+	flex-wrap: wrap;
+}
+
+.Trending, .Latest, .subscribe {
+	width: 30%;
+	display: flex;
+	/* justify-content: center; */
+	flex-direction: column;
+	height: 100%;
+}
+
+.Trending__name, .Latest__name, .News__title {
+	font-size: 40px;
+	font-family: Acme;
+	text-decoration: underline;
+}
+
+.vertical {
+	width: 1px;
+	background-color: black;
+	margin: 0px 2%;
+	box-sizing: content-box;
+}
+
+.Trending__details, .Latest__details {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.Latest__details{
+	height: 30%;
+	margin: 7% 0px;
+}
+
+.Trending__details{
+	margin: 4% 0px;
+}
+
+.Trending__image {
+	width: 100%;
+	height: 100%;
+}
+
+.details__image {
+	width: 100%;
+	height: 20%;
+	border-radius: 10px;
+}
+
+.News {
+	display: flex;
+	flex-direction: column;
+	margin: 5% 0px;
+	height: 100%;
+}
+
+.News__form {
+	display: flex;
+	flex-direction: column;
+	outline: 1px solid black;
+	padding: 4%;
+	height: 100%;
+	justify-content: space-between;
+}
+
+input {
+	height: 5vh;
+	padding-left: 7px;
+	font-size: 20px;
+	margin: 4% 0px;
+}
+
+input[type="button"] {
+	height: 70px;
+	font-size: 25px;
+	font-weight: 500;
+	background-color: white;
+
+}
+
+input[type='button']:hover {
+	background-color: black;
+	color: white;
+	transition-property: background-color, color;
+	transition-duration: 2s;
+	transition-timing-function: linear;
+}
+
+.details__read:hover {
+	text-decoration: underline;
+	color: blue;
+	cursor: pointer;
+}
+
+.Trending__title, .Latest__title {
+	font-family: 'Kanit-BoldItalics';
+}
+.details__details {
+	font-family: 'Kanit-thin';
+	font-weight: 900;
+}
+
+@media (max-width: 900px) {
+	.information {
+		display: flex;
+		flex-direction: column;
+	}
+	.subscribe, .Trending, .Latest{
+		width: 100%;
+	}
+	.Carousel{
+		display: none;
+	}
+}

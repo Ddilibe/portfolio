@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} {{ values.title }} {% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/blog_page.css' %}">
+{% endblock %}
+
+{% block body %}
+
+<div class="Readers">
+    <div class="Readers_section">
+        <h1 class="title">{{ values.title }}</h1>
+
+        <div class="Readers_date"><p>{{ values.publish_date }}</p></div>
+
+        <div class="tags">
+            {% for i in tags %}
+            <div class="row justify-content-evenly">
+                <p class="tags__name col btn" style="margin: 1px;"><a href="{% url 'blog_tag_details' i.id %}">{{ i.name }}</a></p>
+            </div>
+            <!-- <p class="tags__name">Man</p> -->
+            <!-- <p class="tags__name">Man</p> -->
+            {% endfor %}
+        </div>
+
+        <img src="{{ values.main_image.url }}" class="Readers__image img-fluid">
+        <div class="details">
+            <div class="details__social">
+                <img src="{% static 'images/icons8-facebook-f-24.png' %}" alt="image of somthing is going to be here">
+                <img src="{% static 'images/icons8-instagram-logo (1).svg' %}" alt="image of somthing is going to be here">
+                <img src="{% static 'images/icons8-twitter (2).svg' %}" alt="image of somthing is going to be here">
+                <img src="{% static 'images/icon_medium.svg' %}" alt="image of somthing is going to be here">
+            </div>
+            <div class="details__text">
+                {{ values.content|safe }}
+            </div>
+        </div>
+    </div>
+    <div class="vertical"></div>
+    <div class="related">
+        <div class="related__topics">Related Topics</div>
+        {% for related in related %}
+            <div class="related__article">
+                <h3 class="related__title"> {{ related.title }} </h3>
+                <p class="related__text">
+                    {{ related.content|safe|truncatechars:104 }}
+                </p>
+                <p class="related__read"><a href="{% url 'detail_blog' related.id %}"> Read More &rarr;</a></p>
+            <div class="vertical__related"></div>
+            </div>
+                 {% empty %}
+            <div class="related__article">
+                <h3 class="related__title"> There are no articles related to this article </h3>
+            </div>
+        {% endfor %}
+        <!-- <div class="vertical__related"></div> -->
+    </div>
+</div>
+
+
+    <div class="hr"></div>
+{% endblock %}
