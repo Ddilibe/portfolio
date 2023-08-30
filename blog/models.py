@@ -5,17 +5,17 @@ from uuid import uuid4
 
 
 class TagBlog(models.Model):
-    id = models.UUIDField(primary_key=True)
+    id = models.UUIDField(primary_key=True, default=uuid4)
     name = models.CharField(max_length=50, null=False)
     description = models.TextField(null=True)
-    background_color = models.CharField(max_length=255, null=False)
+    background_color = models.CharField(max_length=255, null=True)
 
     def __str__(self):
         return self.name
 
 
 class Blog(models.Model):
-    id = models.UUIDField(primary_key=True)
+    id = models.UUIDField(primary_key=True, default=uuid4)
     title = models.CharField(max_length=255, null=False)
     main_image = models.ImageField(upload_to='images/blogs', null=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -31,7 +31,7 @@ class Blog(models.Model):
 
 
 class BlogComment(models.Model):
-    id = models.UUIDField(primary_key=True)
+    id = models.UUIDField(primary_key=True, default=uuid4)
     blog = models.ForeignKey(Blog, on_delete=models.CASCADE)
     name = models.CharField(max_length=255, null=False)
     email = models.EmailField(max_length=255, null=False)
