@@ -119,6 +119,23 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+# Cloud Storage configuration
+STORAGES = {
+    "default": {
+        "BACKEND": "storages.backends.s3boto3.S3Boto3Storage"
+    },
+    "staticfiles": {
+        "BACKEND": "storages.backends.s3boto3.S3ManifestStaticStorage"
+    }
+}
+
+
+AWS_S3_ENDPOINT_URL = os.getenv('AWS_S3_ENDPOINT_URL')
+AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
+AWS_S3_REGION_NAME = os.getenv('AWS_S3_REGION_NAME')
+AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
+
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
@@ -137,10 +154,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"
-STATIC_ROOT = "staticfiles/"
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,"static")
-]
+# STATIC_ROOT = "staticfiles/"
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR,"static")
+# ]
 
 
 
