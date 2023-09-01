@@ -231,7 +231,17 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-CSRF_COOKIE_SECURE = True
+CSRF_TRUSTED_ORIGINS = ['http://.*', 'http://example.com', 'http://www.example.com', 'https://dilibe.up.railway.app/']
 
+
+# HTTPS Settings
 SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = False
+SECURE_SSL_REDIRECT = False
+
+# HSTS Settings
+
+SECURE_HSTS_SECONDS = 31536000
+SECURE_HSTS_PRELOAD = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 
