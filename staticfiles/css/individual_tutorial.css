@@ -1,0 +1,54 @@
+.title {
+	background-image: url('../images/vladimir-anikeev-IM8ZyYaSW6g-unsplash.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 300px;
+	margin-top: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 25px;
+	text-align: center;
+	font-family: monospace;
+}
+
+.naming {
+	font-size: 25px;
+	font-family: monospace;
+	text-transform: capitalize;
+	text-align: center;
+	margin: 5% auto;
+}
+
+.series {
+	display: grid;
+	width: 90%;
+	justify-content: center;
+	margin: 0px auto;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-template-rows: repeat(auto-fit, minmax(200px, 300px));
+	grid-gap: 10px;
+}
+
+.sammy {
+	width: 100%;
+	height: 300px;
+	cursor: pointer;
+}
+
+.sammy:hover{
+	background-color: darkgray;
+	border-radius: 4px;
+	outline: 1px solid darkgray;
+}
+
+.sammy_image{
+	width: 100%;
+	height: 50%;
+}
+
+.time {
+	text-align: right;
+}
+ 
