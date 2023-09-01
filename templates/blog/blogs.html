@@ -17,8 +17,8 @@
             <a href="{% url 'detail_blog' top.id %}">
                 <div class="comment_text_time">{{ top.publish_date }}</div>
                 <div class="comment_text_title">{{ top.title }}</div>
-                <div class="comment_text_texting">A little story about the article with the highest views or the highest comments. Just depends on the one</div>
-                <!-- <div class="comment_text_texting">{{ top.content|safe|truncatechars:'104' }}</div> -->
+                <!-- <div class="comment_text_texting">A little story about the article with the highest views or the highest comments. Just depends on the one</div> -->
+                <div class="comment_text_texting">{{ top.content|safe|truncatechars:'13' }}</div>
             </a>
             </div>
         </div>
@@ -44,7 +44,7 @@
                         <a href="{% url 'detail_blog' blog.id %}">
                             <img src="{{ blog.main_image.url }}" class="That Image img-fluid">
                             <h3 class="sub_title">{{ blog.title }}</h3>
-                            <p>{{ blog.content|safe|truncatechars:104 }} </p>
+                            <p>{{ blog.content|safe|truncatechars:60 }} </p>
                         </a>
                     </div>
                 {% endfor %}

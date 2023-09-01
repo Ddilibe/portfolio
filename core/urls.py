@@ -14,8 +14,8 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.urls import path, include, reverse_lazy
 from django.conf.urls.static import static
-from django.urls import path, include
 from django.contrib.auth import views
 from django.conf import settings
 from django.contrib import admin
@@ -27,7 +27,7 @@ urlpatterns = [
     # path('tutorial/', include('tutorial.urls')),
     path('', blog.views.LandingPageView.as_view(), name="home"),
     path('logout/', views.LogoutView.as_view(next_page="/"), name='logout'),
-    path('login/', views.LoginView.as_view(template_name="login.html"), name='login'),
+    path('login/', views.LoginView.as_view(template_name="login.html", next_page=reverse_lazy('home')), name='login'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

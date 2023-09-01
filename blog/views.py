@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.views.generic import edit, detail
@@ -20,11 +21,13 @@ class LandingPageView(generic.TemplateView):
     def dispatch(self, *args, **kwargs):
         return super().dispatch(*args, **kwargs)
 
-class BlogCreateView(edit.CreateView):
+class BlogCreateView( LoginRequiredMixin, edit.CreateView):
 
     form_class = fm.BlogForm
     template_name = "blog/create_blog.html"
     success_url = reverse_lazy("all_blog")
+    login_url = '/blog/'
+    redirect_field_name = 'home'
 
     def get(self, request, *args, **kwargs):
         return super().get(request, *args, **kwargs)
@@ -34,11 +37,13 @@ class BlogCreateView(edit.CreateView):
         form.instance.id = uuid.uuid4()
         return super().form_valid(form)
 
-class TagBlogCreateView(edit.CreateView):
+class TagBlogCreateView(LoginRequiredMixin,edit.CreateView):
 
     form_class = fm.TagBlogForm
     template_name = "blog/create_tag.html"
     success_url = reverse_lazy('all_blog_tags')
+    login_url = '/blog/'
+    redirect_field_name = 'home'
 
     def form_valid(self, form):
         form.instance.id = uuid.uuid4()
@@ -78,12 +83,14 @@ class TagBlogDetailView(detail.DetailView):
         return render(request, self.template_name, {'tag':tag, 'blogs':blog})
 
 
-class BlogUpdateView(edit.UpdateView):
+class BlogUpdateView(LoginRequiredMixin, edit.UpdateView):
 
     model = md.Blog
     form_class = fm.BlogForm
     template_name = 'blog/blog_update_view.html'
     success_url = reverse_lazy('all_blog')
+    login_url = '/blog/'
+    redirect_field_name = 'home'
 
     def get(self, request, pk, *args, **kwargs):
         self.object = self.get_object()
@@ -94,22 +101,28 @@ class BlogUpdateView(edit.UpdateView):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
-class TagBlogUpdateView(edit.UpdateView):
+class TagBlogUpdateView(LoginRequiredMixin, edit.UpdateView):
 
     form_class = fm.TagBlogForm
     template_name = 'blog/tag_update_view.html'
+    login_url = '/blog/'
+    redirect_field_name = 'home'
 
 
-class TagBlogDeleteView(edit.DeleteView):
+class TagBlogDeleteView(LoginRequiredMixin, edit.DeleteView):
 
     form_class = fm.TagBlogForm
     success_url = "home"
+    login_url = '/blog/'
+    redirect_field_name = 'home'
 
 
-class BlogDeleteView(edit.DeleteView):
+class BlogDeleteView(LoginRequiredMixin, edit.DeleteView):
 
     form_class = fm.BlogForm
     success_url = "home"
+    login_url = '/blog/'
+    redirect_field_name = 'home'
 
 class BlogLandingView(generic.ListView):
 
