@@ -6,7 +6,7 @@
     <div class="container my-5 col-sm-8 py-5 mx-auto bg-body-tertiary p-5 rounded">
         <main class="form-signin w-100 m-auto">
           <form method="post" action="{% url 'login' %}">
-            <img class="mb-4 text-center" src="{% static 'images/ibOjFz01 (1).svg' %}" alt="" width="72" height="57">
+            <img class="mb-4 text-center" src="https://privatecdn.onrender.com/portfolio/images/IbOjFz01%20(1).svg" alt="" width="72" height="57">
             <h1 class="h3 mb-3 fw-normal text-center">Please sign in</h1>
             {% csrf_token %}
             {{ form|crispy }}

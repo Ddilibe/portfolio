@@ -18,9 +18,6 @@ class LandingPageView(generic.TemplateView):
 
     template_name = "landing_page.html"
 
-    def dispatch(self, *args, **kwargs):
-        return super().dispatch(*args, **kwargs)
-
 class BlogCreateView( LoginRequiredMixin, edit.CreateView):
 
     form_class = fm.BlogForm
@@ -148,5 +145,10 @@ class TagBlogListView(generic.ListView):
 
 class BlogShowAllView(generic.ListView):
 
-    model = md.TagBlog
+    model = md.Blog
     template_name = 'blog/all_blog.html'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context['blogs'] = md.Blog.objects.filter(published=True).order_by('-publish_date')
+        return context

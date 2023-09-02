@@ -85,12 +85,18 @@ WSGI_APPLICATION = "core.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": os.getenv('LOCALENGINE') if DEBUG else os.getenv('PRODENGINE'),
-        "NAME": os.getenv('LOCALNAME') if DEBUG else os.getenv('PRODNAME'),
-        "USER": os.getenv('LOCALUSER') if DEBUG else os.getenv('PRODUSER'),
-        "PASSWORD": os.getenv('LOCALPASSWORD') if DEBUG else os.getenv('PRODPASSWORD'),
-        "HOST": os.getenv('LOCALHOST') if DEBUG else os.getenv('PRODHOST'),
-        "PORT": int(os.getenv('LOCALPORT')) if DEBUG else int(os.getenv('PRODPORT'))
+        "ENGINE": os.getenv('PRODENGINE'),
+        "NAME": os.getenv('PRODNAME'),
+        "USER": os.getenv('PRODUSER'),
+        "PASSWORD": os.getenv('PRODPASSWORD'),
+        "HOST": os.getenv('PRODHOST'),
+        "PORT": int(os.getenv('PRODPORT')),
+        # "ENGINE": os.getenv('LOCALENGINE') if DEBUG else os.getenv('PRODENGINE'),
+        # "NAME": os.getenv('LOCALNAME') if DEBUG else os.getenv('PRODNAME'),
+        # "USER": os.getenv('LOCALUSER') if DEBUG else os.getenv('PRODUSER'),
+        # "PASSWORD": os.getenv('LOCALPASSWORD') if DEBUG else os.getenv('PRODPASSWORD'),
+        # "HOST": os.getenv('LOCALHOST') if DEBUG else os.getenv('PRODHOST'),
+        # "PORT": int(os.getenv('LOCALPORT')) if DEBUG else int(os.getenv('PRODPORT'))
         # "ENGINE": "django.db.backends.sqlite3",
         # "NAME": BASE_DIR / "db.sqlite3",
         # 'OPTIONS': {
@@ -247,7 +253,9 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-CSRF_TRUSTED_ORIGINS = ['http://.*', 'http://example.com', 'http://www.example.com', 'https://dilibe.up.railway.app']
+CSRF_TRUSTED_ORIGINS = [
+    'http://.*', 'http://example.com', 'http://www.example.com', 'https://dilibe.up.railway.app', "https://.*"
+]
 
 
 # HTTPS Settings
@@ -261,3 +269,42 @@ SECURE_HSTS_SECONDS = 31536000
 SECURE_HSTS_PRELOAD = True
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 
+
+# Configuration for logging
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {
+        "verbose": {
+            "format": "{levelname} {asctime} {module} {process:d} {thread:d} {message}",
+            "style": "{",
+        },
+        "simple": {
+            "format": "{levelname} {message}",
+            "style": "{",
+        },
+    },
+    "handlers": {
+        "file": {
+            "level": "INFO",
+            "class": "logging.FileHandler",
+            "filename": "debug.log",
+            "formatter": "simple",
+        },
+        "mail_admins": {
+            "level": "ERROR",
+            "class": "django.utils.log.AdminEmailHandler",
+        },
+    },
+    "loggers": {
+        "django": {
+            "handlers": ["file"],
+            "propagate": True,
+        },
+        "django.request": {
+            "handlers": ["mail_admins"],
+            "level": "ERROR",
+            "propagate": False,
+        },
+    },
+}

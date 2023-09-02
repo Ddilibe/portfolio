@@ -8,7 +8,9 @@
         <p class="fs-1 text-center">Update Blog Post: {{form.title.value}}</p>
         <form method='post' class="row g-3" enctype="multipart/form-data">
             {% csrf_token %}
-            {{ form.media }}
+            <link href="https://privatecdn.onrender.com/portfolio/ckeditor/ckeditor.css" media="all" rel="stylesheet">
+            <script src="https://privatecdn.onrender.com/portfolio/ckeditor/ckeditor-init.js" data-ckeditor-basepath="https://privatecdn.onrender.com/portfolio/ckeditor/ckeditor/" id="ckeditor-init-script"></script>
+            <script src="https://privatecdn.onrender.com/portfolio/ckeditor/ckeditor/ckeditor.js"></script>
             {{ form|crispy }}
 
             <div class="col-12">

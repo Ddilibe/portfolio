@@ -2,7 +2,7 @@
 {% load static %}
 {% block title %} {{ values.title }} {% endblock %}
 {% block style %}
-    <link rel="stylesheet" href="{% static 'css/blog_page.css' %}">
+    <link rel="stylesheet" href="https://privatecdn.onrender.com/portfolio/css/blog_page.css">
 {% endblock %}
 
 {% block body %}
@@ -26,10 +26,10 @@
         <img src="{{ values.main_image.url }}" class="Readers__image container img-fluid ratio ratio-4x3">
         <div class="details">
             <div class="details__social">
-                <img src="{% static 'images/icons8-facebook-f-24.png' %}" alt="image of somthing is going to be here">
-                <img src="{% static 'images/icons8-instagram-logo (1).svg' %}" alt="image of somthing is going to be here">
-                <img src="{% static 'images/icons8-twitter (2).svg' %}" alt="image of somthing is going to be here">
-                <img src="{% static 'images/icon_medium.svg' %}" alt="image of somthing is going to be here">
+                <img src="https://privatecdn.onrender.com/portfolio/images/icons8-facebook-f-24.png" alt="image of somthing is going to be here">
+                <img src="https://privatecdn.onrender.com/portfolio/images/icons8-instagram-logo%20(1).svg" alt="image of somthing is going to be here">
+                <img src="https://privatecdn.onrender.com/portfolio/images/icons8-twitter%20(2).svg" alt="image of somthing is going to be here">
+                <img src="https://privatecdn.onrender.com/portfolio/images/icon_medium.svg" alt="image of somthing is going to be here">
             </div>
             <div class="details__text lh-lg">
                 {{ values.content|safe }}
