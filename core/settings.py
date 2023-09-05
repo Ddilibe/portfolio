@@ -29,6 +29,7 @@ SECRET_KEY = os.getenv('SECRETKEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True if os.getenv("DEBUG") else False
+print(DEBUG)
 
 ALLOWED_HOSTS = ['*']
 
@@ -162,6 +163,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
+# Cloud Storage configuration
 
 STATIC_URL = "static/" if DEBUG else os.getenv("PRIVATECDN")
 if DEBUG:
@@ -169,16 +171,18 @@ if DEBUG:
     STATICFILES_DIRS = [
         os.path.join(BASE_DIR,"static")
     ]
-
-
-
-# Cloud Storage configuration
-if not DEBUG:
+else:
     STORAGES = {
         "default": {
             "BACKEND": "storages.backends.s3boto3.S3Boto3Storage"
         },
+        "staticfiles": {
+            "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+        },
     }
+
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
