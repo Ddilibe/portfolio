@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRETKEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True if os.getenv("DEBUG") else False
 
 ALLOWED_HOSTS = ['*']
 
@@ -83,14 +83,27 @@ WSGI_APPLICATION = "core.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+external, internal = {
+    "ENGINE": os.getenv('PRODENGINE'),
+    "NAME": os.getenv('PRODNAME'),
+    "USER": os.getenv('PRODUSER'),
+    "PASSWORD": os.getenv('PRODPASSWORD'),
+    "HOST": os.getenv('PRODHOST'),
+    "PORT": int(os.getenv('PRODPORT')),
+}, {
+    "ENGINE": "django.db.backends.sqlite3",
+    "NAME": BASE_DIR / "db.sqlite3",
+}
+
 DATABASES = {
-    "default": {
-        "ENGINE": os.getenv('PRODENGINE'),
-        "NAME": os.getenv('PRODNAME'),
-        "USER": os.getenv('PRODUSER'),
-        "PASSWORD": os.getenv('PRODPASSWORD'),
-        "HOST": os.getenv('PRODHOST'),
-        "PORT": int(os.getenv('PRODPORT')),
+    "default": internal if DEBUG else external
+    # {
+    #     "ENGINE": os.getenv('PRODENGINE'),
+    #     "NAME": os.getenv('PRODNAME'),
+    #     "USER": os.getenv('PRODUSER'),
+    #     "PASSWORD": os.getenv('PRODPASSWORD'),
+    #     "HOST": os.getenv('PRODHOST'),
+    #     "PORT": int(os.getenv('PRODPORT')),
         # "ENGINE": os.getenv('LOCALENGINE') if DEBUG else os.getenv('PRODENGINE'),
         # "NAME": os.getenv('LOCALNAME') if DEBUG else os.getenv('PRODNAME'),
         # "USER": os.getenv('LOCALUSER') if DEBUG else os.getenv('PRODUSER'),
@@ -102,7 +115,7 @@ DATABASES = {
         # 'OPTIONS': {
         #     'sslmode': 'verify-full'
         # },
-    }
+    # }x
 }
 
 
@@ -125,15 +138,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Cloud Storage configuration
-STORAGES = {
-    "default": {
-        "BACKEND": "storages.backends.s3boto3.S3Boto3Storage"
-    },
-    "staticfiles": {
-        "BACKEND": "storages.backends.s3boto3.S3ManifestStaticStorage"
-    }
-}
 
 
 AWS_S3_ENDPOINT_URL = os.getenv('AWS_S3_ENDPOINT_URL')
@@ -159,13 +163,22 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = "static/"
-# STATIC_ROOT = "staticfiles/"
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR,"static")
-# ]
+STATIC_URL = "static/" if DEBUG else os.getenv("PRIVATECDN")
+if DEBUG:
+    STATIC_ROOT = "staticfiles/"
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR,"static")
+    ]
 
 
+
+# Cloud Storage configuration
+if not DEBUG:
+    STORAGES = {
+        "default": {
+            "BACKEND": "storages.backends.s3boto3.S3Boto3Storage"
+        },
+    }
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
