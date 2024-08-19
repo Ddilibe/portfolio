@@ -1,0 +1,10 @@
+#image_1 {
+    position: absolute;
+    width: 324px;
+    height: 457px;
+    left: 75px;
+    top: 100px;
+
+    background: url(.png);
+    border-radius: 0px;
+}

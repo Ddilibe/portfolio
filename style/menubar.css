@@ -1,0 +1,14 @@
+.faq {
+    background-color: orange;
+    border-radius: 9%;
+    font-family: "Cutive Mono", monospace;
+    width: 10vh;
+}
+
+#navbarNav {
+    font-family: "Cutive Mono", monospace;
+}
+
+.navbar-brand {
+    font-family: "Vanio Bold";
+}
