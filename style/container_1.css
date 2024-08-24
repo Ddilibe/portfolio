@@ -8,3 +8,22 @@
     background: url(.png);
     border-radius: 0px;
 }
+
+.mechanical-title {
+    font-family: Mechanical;
+    font-size: 3em;
+}
+
+.vanico-title {
+    font-family: monospace;
+    font-size: 1.2em;
+}
+
+@media (max-width: 992px) {
+    .mechanical-title{
+        font-size: 1.5em;
+    }
+    .vanico-title {
+        font-size: 0.6;
+    }
+}

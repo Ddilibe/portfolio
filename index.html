@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -19,14 +19,16 @@
         crossorigin="anonymous"></script>
 
     <!-- Styling sheetd -->
+    <link rel="stylesheet" href="style/fonts.css">
     <link rel="stylesheet" href="style/menubar.css">
     <link rel="stylesheet" href="style/container_1.css">
 </head>
 
-<body style="background-color: black !important;">
-    <nav class="navbar navbar-expand-lg">
+<body style="background-color: #14141E !important;" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0"
+    tabindex="0">
+    <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid mx-2 px-2">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="#" style="color: white !important;">
                 <img src="svg/logo.svg" alt="" width="48" height="48">
                 Dilibe's Portfolio
             </a>
@@ -37,19 +39,19 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item px-2 mx-1">
-                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link active" href="#" style="color: white !important;">Home</a>
                     </li>
                     <li class="nav-item px-2 mx-1">
-                        <a class="nav-link active " href="#">About</a>
+                        <a class="nav-link active " href="#" style="color: white !important;">About</a>
                     </li>
                     <li class="nav-item px-2 mx-1">
-                        <a class="nav-link active " href="#">Skill</a>
+                        <a class="nav-link active " href="#" style="color: white !important;">Skill</a>
                     </li>
                     <li class="nav-item px-2 mx-1">
-                        <a class="nav-link  active" href="#">Contact</a>
+                        <a class="nav-link  active" href="#" style="color: white !important;">Contact</a>
                     </li>
                     <li class="nav-item faq px-2 mx-1">
-                        <a class="nav-link active" href="#">FAQ</a>
+                        <a class="nav-link active" href="#" style="color: white !important;">FAQ</a>
                     </li>
                 </ul>
             </div>
@@ -57,20 +59,48 @@
     </nav>
 
     <!-- First container -->
-    <div class="container mt-5">
-        <div class="row align-items-start">
-          <div class="col mt-5">
-            <div class="text-center mt-5 justify-content-center align-items-bottom">
-                <h1 class="justify-content-end">INTRODUCING MYSELF</h1>
-                <p>Hi Folks, My name is Dilibe</p>
-                <p>Join me as I showcase my skills and expertise</p>
+    <div class="container-sm section1" style="color: white;">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <div class="col justify-content-left align-items-center text-center">
+                <div class="mb-3 mb-md-0">
+                    <h1 class="justify-content-left my-5 mechanical-title">WELCOME TO MY PORTFOLIO</h1>
+                    <p class="vanico-title">Hello! I’m Dilibe, a dedicated software developer with a passion for complex solving
+                        problems. With a strong background in data analysis, database management and web development, I
+                        specialize in turning complex challenges into user-friendly applications.</p>
+                </div>
             </div>
-          </div>
-          <div class="col">
-            <img src="svg/twomacbooks.svg" class="img-fluid" alt="Two macbooks">
-          </div>
+            <div class="col">
+                <img src="images/IMG-20240530-WA0076.jpg" class="img-fluid" alt="Two macbooks"
+                    style="transform: scale(0.8); border-radius: 3%;" width="510" height="768">
+            </div>
         </div>
-      </div>
+    </div>
+
+    <!-- About myself section -->
+    <div style="background-color: white;" class="section2">
+        <div class="container my-5" style="background-color: white;">
+            <div class="text-center">
+                <h1 style="color: #14141E;" class="m-3">WHAT TO KNOW ABOUT DILIBE</h1>
+                <p style="font-size: 40px;">
+                    Hi, I'm Dilibe, a software engineer who has a deep passion for coding. I view coding as a form of
+                    art
+                    because it allows you to create systems with diverse functionalities. My key strengths include
+                    persistence and collaboration. As a wise person once said, 'It's not that I'm exceptionally smart;
+                    it's
+                    just that I stick with problems longer.' Whenever I face challenges while coding, I remind myself of
+                    this quote and put in extra effort.
+                    I also believe that no one can succeed alone. Teamwork is essential for achieving goals and
+                    developing
+                    large-scale projects. I excel at leading and communicating with my colleagues, fostering a sense of
+                    team
+                    spirit and promoting collaboration. In my free time, I enjoy watching anime, playing video games,
+                    and
+                    participating in other recreational activities.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

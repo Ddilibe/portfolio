@@ -32,3 +32,10 @@
     font-weight: 400;
     font-style: normal;
 }
+
+@font-face {
+    font-family: Mechanical;
+    src: url(../fonts/meccanica-regular.otf);
+    font-weight: 900;
+    font-style: normal;
+}
