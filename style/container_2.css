@@ -1,0 +1,15 @@
+.container_2 {
+    background-color: #151517;
+    color: black;
+}
+
+.aboutme-title {
+    font-family: Mechanical;
+    font-weight: 900;
+    font-size: 3em;
+}
+
+.aboutme-text {
+    font-family: monospace;
+    font-weight: 900;
+}

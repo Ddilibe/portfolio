@@ -1,0 +1,548 @@
+body {
+    font-family: Mechanical; /*, 'Roboto', sans-serif; Modern font*/
+    color: #333;
+    /* background-color: #f0f0f0; */
+    background-color: #004080;
+}
+
+header {
+    background-color: #004080; /* Dark blue */
+    color: white;
+    padding: 20px;
+}
+nav {
+    background-color: #002244; /* Darker blue */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #0066cc; /* Hover color */
+}
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    font-weight: bold;
+}
+
+.cta {
+    background-color: #0066cc; /* Button color */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background-color: #004080; /* Hover color */
+}
+
+.projects, .posts, .testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project, .post, .testimonial {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.project:hover, .post:hover, .testimonial:hover {
+    transform: translateY(-5px);
+}
+
+footer {
+    background-color: #002244; /* Darker blue */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#featured-projects {
+    padding: 40px 20px;
+    background-color: #e6f0ff; /* Light blue background */
+    text-align: center;
+}
+
+.projects {
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: space-between; /* Space between items */
+}
+
+.project {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* margin: 20px; */
+    /* padding: 20px; */
+    width: calc(33.33% - 40px); /* 16.66% width minus margin for six items */
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project img {
+    width: 100%; /* Responsive image */
+    border-radius: 8px;
+}
+
+.project h3 {
+    font-size: 1.2em; /* Slightly smaller heading for more projects */
+    margin: 10px 0;
+}
+
+.project p {
+    font-size: 0.8em; /* Slightly smaller text for more projects */
+    color: #666;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 12px; /* Slightly smaller padding for more projects */
+    background-color: #004080; /* Button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #0066cc; /* Hover color */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    .project {
+        width: calc(33.33% - 40px); /* 3 items in a row */
+    }
+}
+
+@media (max-width: 800px) {
+    .project {
+        width: calc(33.33% - 40px); /* 2 items in a row */
+    }
+}
+
+@media (max-width: 500px) {
+    .project {
+        width: calc(100% - 40px); /* 1 item in a row */
+    }
+
+    .project h3 {
+        font-size: 1.1em; /* Adjust heading size for smaller screens */
+    }
+
+    .project p {
+        font-size: 0.9em; /* Adjust text size for smaller screens */
+    }
+    .hero-overlay {
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+        border-radius: 10px; /* Rounded corners */
+    }
+}
+
+#hero {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    background-image: url('../images/file-ErBd61S65Tje8rtcsJv8LDxd.jpg'); /* Background image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background */
+    color: white; /* Text color */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    padding: 40px;
+    border-radius: 10px; /* Rounded corners */
+}
+
+h1 {
+    font-size: 8vh; /* Large font size for the headline */
+    margin: 0;
+    font-family: 'Georgia', serif; /* Elegant font */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for depth */
+}
+
+p {
+    font-size: 1.2em; /* Slightly smaller font size for subheading */
+    margin: 20px 0;
+}
+
+.cta-buttons {
+    margin: 20px 0;
+}
+
+.cta {
+    display: inline-block;
+    padding: 12px 24px; /* Button padding */
+    margin: 10px; /* Space between buttons */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* No underline */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.primary {
+    background-color: #004080; /* Primary button color */
+    color: white;
+}
+
+.primary:hover {
+    background-color: #0066cc; /* Hover color */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.secondary {
+    background-color: transparent; /* Transparent background */
+    border: 2px solid white; /* White border */
+    color: white; /* Text color */
+}
+
+.secondary:hover {
+    background-color: white; /* White background on hover */
+    color: #004080; /* Change text color */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.social-icons {
+    margin: 20px;
+    /* background-color: white !important; */
+}
+
+
+.social-icons i {
+    width: 100px; /* Size of social icons */
+    margin: 0 10px; /* Space between icons */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.social-icons a i:hover {
+    transform: scale(3.1); /* Slightly enlarge icons on hover */
+}
+i {
+    color: white;
+}
+
+#latest-posts {
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Light background color */
+    text-align: center;
+}
+
+.latest-posts-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: space-between; /* Space between columns */
+}
+
+.latest-post {
+    flex: 0 0 60%; /* Take up 60% of the width for the latest post */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Padding for content */
+    margin: 10px; /* Margin for spacing */
+}
+
+.latest-post img {
+    width: 100%; /* Responsive image */
+    border-radius: 8px;
+    height: auto; /* Maintain aspect ratio */
+}
+
+.latest-post h3 {
+    margin-top: 10px; /* Adjust heading margin */
+}
+
+.latest-post p {
+    margin-top: 10px; /* Adjust paragraph margin */
+    font-size: 0.9em; /* Slightly smaller font size */
+}
+
+.random-posts {
+    flex: 0 0 35%; /* Take up 35% of the width for random posts */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Padding for content */
+    margin: 10px; /* Margin for spacing */
+}
+
+.random-posts .post {
+    margin-bottom: 20px; /* Space between random posts */
+}
+
+.random-posts img {
+    width: 100%; /* Responsive image */
+    border-radius: 8px;
+    height: auto; /* Maintain aspect ratio */
+}
+
+.random-posts h4 {
+    margin-top: 5px; /* Adjust heading margin */
+    font-size: 1em; /* Font size for random post titles */
+}
+
+.random-posts p {
+    margin-top: 5px; /* Adjust paragraph margin */
+    font-size: 0.8em; /* Smaller font size */
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px; /* Button padding */
+    background-color: #004080; /* Button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #0066cc; /* Hover color */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 800px) {
+    .latest-post {
+        flex: 0 0 100%; /* Stack on small screens */
+    }
+
+    .random-posts {
+        flex: 0 0 100%; /* Stack on small screens */
+    }
+}
+.cta {
+    display: inline-block;
+    margin: 20px auto; /* Center the button */
+    padding: 10px 20px; /* Button padding */
+    background-color: #004080; /* Button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background-color: #0066cc; /* Hover color */
+}
+
+/* Centering the button */
+
+@media (max-width: 500px) {
+    .project {
+        width: calc(100% - 40px); /* 1 item in a row */
+    }
+
+    .project h3 {
+        font-size: 1.1em; /* Adjust heading size for smaller screens */
+    }
+
+    .project p {
+        font-size: 0.9em; /* Adjust text size for smaller screens */
+    }
+    .hero-overlay {
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    }
+}
+
+#about {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #e0f7fa, #ffffff); /* Gradient background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    text-align: center; /* Center text */
+}
+
+.about-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between columns */
+    align-items: flex-start; /* Align items at the top */
+}
+
+.profile {
+    flex: 0 0 40%; /* Set width for profile section */
+    text-align: center; /* Center text in profile */
+}
+
+.profile img {
+    width: 50vh; /* Increased width for the profile image */
+    /* height: 200px; Set a fixed height for the profile image */
+    border-radius: 10%; /* Circular image */
+    /* border: solid 004080; Border color */
+}
+
+.profile h3 {
+    margin: 10px 0; /* Space around the name */
+}
+
+.profile p {
+    margin: 10px 0; /* Space around the introduction */
+}
+
+.skills {
+    flex: 0 0 55%; /* Set width for skills section */
+    text-align: left; /* Align text to the left */
+}
+
+.skill-category {
+    margin-bottom: 30px; /* Space between skill categories */
+}
+
+.skill-category h4 {
+    font-size: 1.5em; /* Font size for category headings */
+    color: #004080; /* Category heading color */
+    margin-bottom: 10px; /* Space below category heading */
+}
+
+.skill {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between name and progress bar */
+    margin-bottom: 5px; /* Space between skills */
+}
+
+.skill-name {
+    flex: 0 0 20%; /* Set a fixed width for skill names */
+}
+
+.skill-progress {
+    flex: 1; /*Grow to fill remaining space*/
+}
+
+.progress-bar {
+    background: #e0e0e0; /* Light gray background */
+    border-radius: 5px;
+    height: 12px; /* Height of the progress bar */
+    overflow: hidden; /* Hide overflow */
+    margin-top: 5px; /* Space above the progress bar */
+}
+
+.progress {
+    background: #004080; /* Progress color */
+    height: 100%; /* Full height */
+    transition: width 0.5s ease; /* Smooth transition */
+}
+
+/* Add hover effect for progress bars */
+.progress-bar:hover {
+    background: #b0c4de; /* Change background color on hover */
+}
+
+.cta {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px; /* Button padding */
+    background-color: #004080; /* Button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background-color: #0066cc; /* Hover color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center items */
+    }
+
+    .profile {
+        /* flex: 0 0 100%; Full width for profile on smaller screens */
+        margin-bottom: 20px; /* Space below profile */
+    }
+
+    .skills {
+        /* flex: 0 0 100%; Full width for skills on smaller screens */
+        text-align: center; /* Center text in skills section */
+        width: 100%;
+    }
+
+    .skill {
+        /* flex-direction: column; Stack skill name and progress bar */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .skill-name {
+        width: 100%; /* Full width for skill names */
+        display: flex; /* Use flexbox for icon and title */
+        justify-content: space-between; /* Space between name and icon */
+    }
+
+    .skill-progress {
+        width: 100%; /* Full width for progress bars */
+    }
+
+    .progress-bar {
+        width: 100%; /* Full width for progress bars */
+    }
+}
+
+@media (max-width: 480px) {
+    .profile img {
+        width: 150px; /* Smaller profile image on very small screens */
+        height: 150px; /* Maintain aspect ratio */
+    }
+
+    .profile h3 {
+        font-size: 1.2em; /* Smaller font size for name */
+    }
+
+    .profile p {
+        font-size: 0.9em; /* Smaller font size for paragraph */
+    }
+
+    .skill-category h4 {
+        font-size: 1.2em; /* Smaller font size for category headings */
+    }
+
+    .skill-name h5 {
+        font-size: 1em; /* Smaller font size for skill names */
+    }
+}
+.skill-icon {
+    width: 3vh;
+    margin: 5px;
+}
+
+.project_2 {
+    height: 40vh;
+}
+
+.project_1 {
+    height: 40vh;
+    width: 20vh;
+}
