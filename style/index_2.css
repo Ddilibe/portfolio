@@ -159,6 +159,9 @@ footer {
 
     .project p {
         font-size: 0.9em; /* Adjust text size for smaller screens */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; /* Optional: Prevents line breaks */
     }
     .hero-overlay {
         background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
@@ -186,7 +189,7 @@ footer {
 }
 
 h1 {
-    font-size: 8vh; /* Large font size for the headline */
+    font-size: vvh; /* Large font size for the headline */
     margin: 0;
     font-family: 'Georgia', serif; /* Elegant font */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for depth */
@@ -513,8 +516,8 @@ i {
 
 @media (max-width: 480px) {
     .profile img {
-        width: 150px; /* Smaller profile image on very small screens */
-        height: 150px; /* Maintain aspect ratio */
+        /* width: 20; Smaller profile image on very small screens */
+        height: 40v; /* Maintain aspect ratio */
     }
 
     .profile h3 {
