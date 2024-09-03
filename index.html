@@ -1,15 +1,14 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <link rel="shortcut icon" href="svg/logo.svg" type="image/x-icon">
 
-    <!-- Fonts used -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/fonts.css">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -17,15 +16,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- Styling sheetd -->
-    <link rel="stylesheet" href="style/fonts.css">
-    <link rel="stylesheet" href="style/menubar.css">
-    <link rel="stylesheet" href="style/container_1.css">
+    <title>My Portfolio </title>
+    <link rel="stylesheet" href="style/index_2.css">
 </head>
 
-<body style="background-color: #14141E !important;" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0"
-    tabindex="0">
+<body>
     <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid mx-2 px-2">
             <a class="navbar-brand" href="#" style="color: white !important;">
@@ -42,7 +39,7 @@
                         <a class="nav-link active" href="#" style="color: white !important;">Home</a>
                     </li>
                     <li class="nav-item px-2 mx-1">
-                        <a class="nav-link active " href="#" style="color: white !important;">About</a>
+                        <a class="nav-link active " href="#container_2" style="color: white !important;">About</a>
                     </li>
                     <li class="nav-item px-2 mx-1">
                         <a class="nav-link active " href="#" style="color: white !important;">Skill</a>
@@ -58,49 +55,227 @@
         </div>
     </nav>
 
-    <!-- First container -->
-    <div class="container-sm section1" style="color: white;">
-        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-            <div class="col justify-content-left align-items-center text-center">
-                <div class="mb-3 mb-md-0">
-                    <h1 class="justify-content-left my-5 mechanical-title">WELCOME TO MY PORTFOLIO</h1>
-                    <p class="vanico-title">Hello! I’m Dilibe, a dedicated software developer with a passion for complex solving
-                        problems. With a strong background in data analysis, database management and web development, I
-                        specialize in turning complex challenges into user-friendly applications.</p>
+    <section id="hero">
+        <div class="hero-overlay">
+            <h1>WELCOME TO MY PORTFOLIO</h1>
+            <!-- <p>Blending technology and artistry to create unique experiences.</p> -->
+            <div class="cta-buttons">
+                <a href="#" class="cta primary">View My Portfolio</a>
+                <a href="#" class="cta secondary">Read My Blog</a>
+            </div>
+            <div class="social-icons">
+                <a class="socials" href="https://x.com/therealdilibe"><i class="bi bi-twitter-x"></i></a>
+                <a class="socials" href="https://github.com/Ddilibe"><i class="bi bi-github"></i></a>
+                <a class="socials" href="https://linkedin.com/in/dilibe-fidelugwuowo"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <div class="profile">
+                <img src="images/IMG-20240530-WA0076.jpg" alt="Profile Picture">
+                <h3>Fidelugwuowo Dilibe Franklin</h3>
+                <p>Hello There! My name is Dilibe. I am a passionate software developer with a love for creating
+                    innovative solutions through technology. Click view my portfolio to know more about me!</p>
+            </div>
+            <div class="skills text-center">
+                <h3>Skills</h3>
+
+                <div class="skill-category">
+                    <h4>LANGUAGE</h4>
+                    <div class="skill">
+                        <div class="skill-name">
+                            <h5>Python <img src="images/icon/python.png" class="skill-icon">
+                            </h5>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">
+                            <h5>C<img src="images/icon/letter-c.png" class="skill-icon"></h5>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">
+                            <h5>Rust<img src="images/icon/crab.png" class="skill-icon"></h5>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">
+                            <h5>JavaScript
+                                <img src="images/icon/java-script.png" class="skill-icon">
+                            </h5>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4>FRAMEWORKS</h4>
+                    <div class="skill">
+                        <div class="skill-name">
+                            <h5>Django</h5>
+                            <i class="fab fa-react skill-icon"></i>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">
+                            <h5>Pytorch</h5>
+                            <i class="fab fa-angular skill-icon"></i>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">
+                            <h5>Anchor</h5>
+                            <i class="fab fa-node skill-icon"></i>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 50%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4>TECH STACKS</h4>
+                    <div class="skill">
+                        <div class="skill-name">
+                            <h5>Backend</h5>
+                            <i class="fab fa-react skill-icon"></i>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">
+                            <h5>AI/ML</h5>
+                            <i class="fab fa-angular skill-icon"></i>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">
+                            <h5>Blockchain</h5>
+                            <i class="fab fa-node skill-icon"></i>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 50%;"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col">
-                <img src="images/IMG-20240530-WA0076.jpg" class="img-fluid" alt="Two macbooks"
-                    style="transform: scale(0.8); border-radius: 3%;" width="510" height="768">
-            </div>
         </div>
-    </div>
+        <a href="portfolio.html" class="cta">View My Portfolio</a>
+    </section>
 
-    <!-- About myself section -->
-    <div style="background-color: white;" class="section2">
-        <div class="container my-5" style="background-color: white;">
-            <div class="text-center">
-                <h1 style="color: #14141E;" class="m-3">WHAT TO KNOW ABOUT DILIBE</h1>
-                <p style="font-size: 40px;">
-                    Hi, I'm Dilibe, a software engineer who has a deep passion for coding. I view coding as a form of
-                    art
-                    because it allows you to create systems with diverse functionalities. My key strengths include
-                    persistence and collaboration. As a wise person once said, 'It's not that I'm exceptionally smart;
-                    it's
-                    just that I stick with problems longer.' Whenever I face challenges while coding, I remind myself of
-                    this quote and put in extra effort.
-                    I also believe that no one can succeed alone. Teamwork is essential for achieving goals and
-                    developing
-                    large-scale projects. I excel at leading and communicating with my colleagues, fostering a sense of
-                    team
-                    spirit and promoting collaboration. In my free time, I enjoy watching anime, playing video games,
-                    and
-                    participating in other recreational activities.
+    <section id="featured-projects">
+        <h2>Featured Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <img src="images/icon/bow.png" alt="Project 1" class="project_1">
+                <h3>Chariot-API</h3>
+                <p>Chariot-API is a robust e-commerce platform built using Python and flask. It provides a seamless
+                    shopping experience for users and offers powerful tools for merchants to manage their products,
+                    orders, and customers.</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+            <div class="project">
+                <img src="images/icon/currency.png" alt="Project 2" class="project_2">
+                <h3>Solsynk</h3>
+                <p>Solsynk is a decentralized trading platform built on the Solana blockchain, designed to facilitate
+                    efficient and secure synchronized trading. It leverages Solana's high-performance consensus
+                    mechanism and low transaction fees to provide a superior trading experience.</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+            <div class="project">
+                <img src="images/unsupervised machine learning.png" alt="Project 3">
+                <h3>Classification Analysis</h3>
+                <p>This project aimed to categorize Amazon product reviews into three distinct sentiment classes:
+                    positive, negative, and neutral. By leveraging advanced machine learning techniques and natural
+                    language processing, we sought to gain valuable insights into customer sentiment and identify key
+                    factors influencing product ratings.
                 </p>
+                <a href="#" class="project-link">View Project</a>
             </div>
         </div>
-    </div>
-    <script src="script.js"></script>
+    </section>
+
+    <section id="latest-posts">
+        <h2>Latest Blog Posts</h2>
+        <div class="latest-posts-container">
+            <div class="latest-post">
+                <h3>Latest Blog Post Title</h3>
+                <img src="https://via.placeholder.com/300x200.png?text=Latest+Post" alt="Latest Post">
+                <p>A brief description of the latest blog post. This post covers the latest trends in technology and
+                    design, providing insights and tips for readers.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="random-posts">
+                <div class="post">
+                    <h4>Random Post One</h4>
+                    <img src="https://via.placeholder.com/150x100.png?text=Post+1" alt="Random Post 1">
+                    <p>A brief description of Random Post One. This post discusses various topics related to technology.
+                    </p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                <div class="post">
+                    <h4>Random Post Two</h4>
+                    <img src="https://via.placeholder.com/150x100.png?text=Post+2" alt="Random Post 2">
+                    <p>A brief description of Random Post Two. This post explores design principles and best practices.
+                    </p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <!-- Social media icons here -->
+        </div>
+        <p>© 2024 My Portfolio. All rights reserved.</p>
+    </footer>
+
 </body>
 
 </html>
