@@ -514,6 +514,12 @@ i {
     }
 }
 
+@media (max-width: 150px) {
+    .hero-overlay h1 {
+        font-size: 10vh; /* Large font*/
+    }
+}
+
 @media (max-width: 480px) {
     .profile img {
         /* width: 20; Smaller profile image on very small screens */
