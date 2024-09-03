@@ -520,15 +520,15 @@ i {
     }
     .profile img {
         /* width: 20; Smaller profile image on very small screens */
-        height: 35v; /* Maintain aspect ratio */
+        height: 35vh; /* Maintain aspect ratio */
     }
 
 }
 
 @media (max-width: 480px) {
     .profile img {
-        /* width: 20; Smaller profile image on very small screens */
-        height: 40v; /* Maintain aspect ratio */
+        width: 50svh; /*Smaller profile image on very small screens*/
+        height: 60vh; /* Maintain aspect ratio */
     }
 
     .profile h3 {
