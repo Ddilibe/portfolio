@@ -1,0 +1,40 @@
+{
+    "blog": {
+        "blog_1": {
+            "title": "Quantum Computing: A Glimpse into the Next Frontier of Innovation",
+            "image_link": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*0RfOwin0bb-VbWy0qkqrPw.jpeg",
+            "description": "Physics seeks to uncover the universal rules governing our universe, as famously defined by Richard Feynman. In the pursuit of understanding the properties of light and the fundamental laws that govern our reality, scientists stumbled upon a groundbreaking discovery: quantum mechanics. These quantum laws are the building blocks of matter at the atomic level, affecting everything in the universe. While classical physics governs our macroscopic world, the emergence of quantum computing brings the power of quantum physics into the realm of technology.",
+            "blog_link": "https://medium.com/@dilibe/quantum-computing-a-glimpse-into-the-next-frontier-of-innovation-563f95a1c057"
+        },
+        "blog_2": {
+            "title": "Exploring the Power of Bitwise Operations in Coding",
+            "image_link": "https://miro.medium.com/v2/resize:fit:720/format:webp/0*D50AQtDxVGr5W6bj",
+            "description": "In the realm of modern programming, where high-level languages abstract much of the complexity, it’s easy to forget the foundational building blocks upon which computing is built. One such fundamental concept is bitwise operations. These operations deal with individual bits of data, and while they may seem arcane, they continue to underpin many aspects of computing.",
+            "blog_link": "https://medium.com/@dilibe/exploring-the-power-of-bitwise-operations-in-coding-6d52898ea7b1"
+        },
+        "blog_3": {
+            "title": "Package Managers For Windows",
+            "image_link": "https://miro.medium.com/v2/resize:fit:720/format:webp/0*6AjUvERzRNgZeucF",
+            "description": "The preference for graphical user interface (GUI) varies among individuals, with some favoring the use of the terminal while others prefer GUI-based systems. For those seeking a streamlined installation process for computer applications or transitioning from Linux to Windows, there is a fortunate opportunity. This article provides a comprehensive guide for efficiently installing one of the essential package managers specifically designed for the Windows operating system.",
+            "blog_link": "https://medium.com/@dilibe/scoop-package-manager-for-windows-ecac4266002c"
+        },
+        "blog_4": {
+            "title": "The Driving Force Behind Tech's Explosive Growth: Open Source",
+            "image_link": "https://miro.medium.com/v2/resize:fit:720/format:webp/0*Q0tTqy6Q5PGElSx6",
+            "description": "Over the years, we have seen growth like never before in the tech industry. Such growth can be a result of open source. Over 90% of tech source codes are open source. As such, it has greatly improved our lives. Through out this article, I would be taking you thorough a brief introduction into open source.",
+            "blog_link": "https://medium.com/@dilibe/the-driving-force-behind-techs-explosive-growth-open-source-effa0fae1126"
+        }
+    },
+    "latest": {
+        "title": "My literary companions in 2023",
+        "image_link": "https://miro.medium.com/v2/resize:fit:640/format:webp/1*p7ORe2XwkR18s2dnfrOwZw.jpeg",
+        "description": "As we approach the conclusion of the year 2023, I want to outline a selection of books that significantly enriched my literary experience. Among the numerous books I explored, these five where particularly valuable for individuals interested in the tech field, aspiring software developers aiming to progress from a beginner to an intermediate level, and those with a mindset geared toward achieving success.",
+        "blog_link": "https://medium.com/@dilibe/my-literary-companions-in-2023-8165cf1dacca"
+    },
+    "blog template": {
+        "title": "",
+        "image_link": "",
+        "description": "",
+        "blog_link": ""
+    }
+}

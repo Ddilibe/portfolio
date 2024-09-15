@@ -20,6 +20,14 @@
 
     <title>My Portfolio </title>
     <link rel="stylesheet" href="style/index_2.css">
+    <style>
+        #rounded {
+            width: 80vh;
+        }
+        #thumb {
+            width: 30vh;
+        }
+    </style>
 </head>
 
 <body>
@@ -39,16 +47,13 @@
                         <a class="nav-link active" href="#" style="color: white !important;">Home</a>
                     </li>
                     <li class="nav-item px-2 mx-1">
-                        <a class="nav-link active " href="#container_2" style="color: white !important;">About</a>
+                        <a class="nav-link active " href="#about" style="color: white !important;">About</a>
                     </li>
                     <li class="nav-item px-2 mx-1">
-                        <a class="nav-link active " href="#" style="color: white !important;">Skill</a>
+                        <a class="nav-link active " href="#about" style="color: white !important;">Skill</a>
                     </li>
                     <li class="nav-item px-2 mx-1">
-                        <a class="nav-link  active" href="#" style="color: white !important;">Contact</a>
-                    </li>
-                    <li class="nav-item faq px-2 mx-1">
-                        <a class="nav-link active" href="#" style="color: white !important;">FAQ</a>
+                        <a class="nav-link  active" href="#featured-projects" style="color: white !important;">Projects</a>
                     </li>
                 </ul>
             </div>
@@ -71,7 +76,7 @@
         </div>
     </section>
 
-    <section id="about">
+    <section id="about" class="about">
         <h2>About Me</h2>
         <div class="about-container">
             <div class="profile">
@@ -250,24 +255,22 @@
         <div class="latest-posts-container">
             <div class="latest-post">
                 <h3>Latest Blog Post Title</h3>
-                <img src="https://via.placeholder.com/300x200.png?text=Latest+Post" alt="Latest Post">
+                <img src="https://via.placeholder.com/300x200.png?text=Latest+Post" alt="Latest Post" class="rounded mx-auto d-block"id="rounded">
                 <p>A brief description of the latest blog post. This post covers the latest trends in technology and
                     design, providing insights and tips for readers.</p>
                 <a href="#" class="read-more">Read More</a>
             </div>
             <div class="random-posts">
-                <div class="post">
+                <div class="post_1">
                     <h4>Random Post One</h4>
-                    <img src="https://via.placeholder.com/150x100.png?text=Post+1" alt="Random Post 1">
-                    <p>A brief description of Random Post One. This post discusses various topics related to technology.
-                    </p>
+                    <img src="https://via.placeholder.com/150x100.png?text=Post+1" alt="Random Post 1" id="thumb">
+                    <p>A brief description of Random Post One. This post discusses various topics related to technology.</p>
                     <a href="#" class="read-more">Read More</a>
                 </div>
-                <div class="post">
-                    <h4>Random Post Two</h4>
-                    <img src="https://via.placeholder.com/150x100.png?text=Post+2" alt="Random Post 2">
-                    <p>A brief description of Random Post Two. This post explores design principles and best practices.
-                    </p>
+                <div class="post_2">
+                    <h4><b>Random Post Two</b></h4>
+                    <img src="https://via.placeholder.com/150x100.png?text=Post+2" alt="Random Post 2" id="thumb">
+                    <p>A brief description of Random Post Two. This post explores design principles and best practices.</p>
                     <a href="#" class="read-more">Read More</a>
                 </div>
             </div>
@@ -280,7 +283,7 @@
         </div>
         <p>© 2024 My Portfolio. All rights reserved.</p>
     </footer>
-
+    <script src="scripts.js"></script>
 </body>
 
 </html>
